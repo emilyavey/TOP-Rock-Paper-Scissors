@@ -51,17 +51,17 @@ imageButton.addEventListener('click', () => {
 
 // Music Toggle Button
 const backgroundAudio = document.getElementById('backgroundAudio');
-const toggleMusicButton = document.getElementById('toggleMusic');
+const toggleMusicButton = document.getElementById('musicToggleImage');
 
-let isMusicPlaying = true;
+let isMusicPlaying = false;
 
 toggleMusicButton.addEventListener('click', () => {
   if (isMusicPlaying) {
     backgroundAudio.pause();
-    toggleMusicButton.textContent = 'Play Music';
+    musicToggleImage.src = "./resources/music-mute.png";
   } else {
     backgroundAudio.play();
-    toggleMusicButton.textContent = 'Pause Music';
+    musicToggleImage.src = "./resources/music-on.png";
   }
   
   isMusicPlaying = !isMusicPlaying;
