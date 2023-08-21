@@ -6,11 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
-    <script src="javascript.js"></script>
+
 
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="background-video">
+        <video id="backgroundVideo" autoplay loop muted>
+          <source src="./resources/background_video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <audio id="backgroundAudio" loop>
+        <source src="./resources/Smile_Blooms.mp3" type="audio/mpeg">
+    </audio>
+    <button id="toggleMusic">Toggle Music</button>
+      
+
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+
+
+    <div class="content">
+        
+        <!-- Your other content goes here -->
+    </div>
+
+    <div class="settings">
+        <img id="bgToggleImage" src="./resources/background-moving.png" alt="Background Toggle Button">
+        <img id="musicToggleImage" src="./resources/music-on.png" alt="Music Toggle Button">
+    </div>
+
+
+    <script src="javascript.js"></script>
 </body>
 </html>
