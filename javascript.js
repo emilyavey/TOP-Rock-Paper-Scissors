@@ -16,21 +16,22 @@ const outcomes = [
 ];
 
 document.addEventListener("DOMContentLoaded", function() {
-    const rockButton = document.getElementById("rock");
-    const paperButton = document.getElementById("paper");
-    const scissorsButton = document.getElementById("scissors");
+    const rockButton = document.getElementById("rock_button");
+    const paperButton = document.getElementById("paper_button");
+    const scissorsButton = document.getElementById("scissors_button");
   
     rockButton.addEventListener("click", function() {
-      playerChoice = rock
+      playRounds("rock", getComputerChoice())
     });
   
     paperButton.addEventListener("click", function() {
-      playerChoice = paper
+      playRounds("paper", getComputerChoice())
     });
   
     scissorsButton.addEventListener("click", function() {
-      playRounds(scissors, getComputerChoice())
+      playRounds("scissors", getComputerChoice())
     });
+
 });
 
 // Background Toggle Button
@@ -87,22 +88,43 @@ function getComputerChoice() {
     return randomProperty;
 };
     
+var playerCurrentScore = 0, computerCurrentScore = 0;
+const playerScoreDisplay = document.getElementById("playerScore");
+const computerScoreDisplay = document.getElementById("computerScore");
 
 function playRounds(playerChoice, computerChoice) {
     // playerValue and computerValue should be numbers
     const playerValue = choices[playerChoice]
     const computerValue = choices[computerChoice];
-    console.log(playerValue)
-    console.log(computerValue)
+    console.log(playerValue, playerChoice)
+    console.log(computerValue, choices[computerChoice]  )
     const outcome = outcomes[playerValue][computerValue];
+    console.log(outcome)
 
     if (outcome === 0) {
-        return "It's a tie!";
+        console.log("It's a tie!");
+        playerScoreDisplay.textContent = ++playerCurrentScore //use prefix here to use the new incremented number (postfix count++ would've outputed the old number then incremented)
+        computerScoreDisplay.textContent = ++computerCurrentScore
     } else if (outcome === 1) {
-        return "You win!";
+        console.log("You win!");
+        playerScoreDisplay.textContent = ++playerCurrentScore
     } else {
-        return "Computer wins!";
+        console.log("Computer wins!");
+        computerScoreDisplay.textContent = ++computerCurrentScore
     }
+
+    if (playerCurrentScore == 5 || computerCurrentScore == 5) {
+      document.getElementById("rock_button").disabled = true;
+      document.getElementById("paper_button").disabled = true;
+      document.getElementById("scissors_button").disabled = true;
+      if (computerCurrentScore == 5) {
+        console.log("Aw, the computer won! awwawawa");
+      } else {
+        console.log("You're the winner! wowowow");
+      }
+    };
+
+
 };
 
 
@@ -113,3 +135,7 @@ function playRounds(playerChoice, computerChoice) {
 
 // the buttons need to be pressed first before any calculations can be made
 // -> should I make the buttons as the trigger for the calculations? How to make it efficient?
+
+// NEXT IMMEDIATE TASK: make a score board
+// make an element which displays text (a number) that changes
+// attach that changing variable to playRounds
