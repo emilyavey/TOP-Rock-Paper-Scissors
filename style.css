@@ -74,9 +74,10 @@ body {
 
 .tablet {
   width: 70%;
+  margin: 10px;
   background-color: var(--apricot); /* Set the background color of the tablet container */
-  border: 7px solid #DF8B69;
-  border-radius: 49px; /* Adjust the border radius to match the tablet's shape */
+  border: 5px solid #DF8B69;
+  border-radius: 30px; /* Adjust the border radius to match the tablet's shape */
   position: relative; /* Create a positioning context for the SVG */
   overflow: hidden; /* Hide any part of the SVG that goes outside the container */
   display: flex; /* Use flexbox for vertical alignment */
@@ -107,8 +108,8 @@ body {
 }
 
 .settings img{
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 
 
@@ -122,7 +123,7 @@ body {
 
   color: #979261;
   font-family: "Chewy", cursive;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 3px;
 
   position: fixed;
