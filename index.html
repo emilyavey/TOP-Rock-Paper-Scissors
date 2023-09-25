@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy">
 
     <title>Document</title>
 </head>
@@ -21,19 +21,25 @@
         <source src="./resources/Smile_Blooms.mp3" type="audio/mpeg">
     </audio>
       
-    <div class="RPSButtons">
-        <button id="rock_button">Rock</button>
-        <button id="paper_button">Paper</button>
-        <button id="scissors_button">Scissors</button>
+
+    <div class="game">    
+        <div class="RPSButtons">
+            <button id="rock_button">Rock</button>
+            <button id="paper_button">Paper</button>
+            <button id="scissors_button">Scissors</button>
+        </div>
+
+        <div id="playerScore">0</div>
+        <div id="computerScore">0</div>
     </div>
 
-    <div id="playerScore">0</div>
-    <div id="computerScore">0</div>
 
-    <div class="content">
-        
-        <!-- Your other content goes here -->
+    <div class="tablet">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1292" height="811" viewBox="0 0 1292 811" fill="FFC6AC" id="shading">
+          <path d="M238.5 685.5L1292 810.5H0V0L238.5 685.5Z"/>
+        </svg>
     </div>
+      
 
     <div class="settings">
         <img id="bgToggleImage" src="./resources/background-moving.png" alt="Background Toggle Button">

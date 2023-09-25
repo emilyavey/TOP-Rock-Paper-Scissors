@@ -39,6 +39,21 @@ time, mark, audio, video {
  /*                     2 - GENERAL CSS FOR STYLING                                  */
  /*----------------------------------------------------------------------------------*/
 
+ :root {
+  /*naming scheme done by coolors :)*/
+  --apricot: #FFC6AC;
+  --cornsilk: #FFF6DC;
+  --sage: #C4C1A4;
+  --cadetgray: #9E9FA5;
+
+ }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .background-video {
   position: fixed;
   top: 0;
@@ -53,6 +68,29 @@ time, mark, audio, video {
   min-height: 100%;
 }
 
+.game {
+  position: absolute;
+}
+
+.tablet {
+  width: 70%;
+  background-color: var(--apricot); /* Set the background color of the tablet container */
+  border: 7px solid #DF8B69;
+  border-radius: 49px; /* Adjust the border radius to match the tablet's shape */
+  position: relative; /* Create a positioning context for the SVG */
+  overflow: hidden; /* Hide any part of the SVG that goes outside the container */
+  display: flex; /* Use flexbox for vertical alignment */
+  align-items: flex-end
+}
+
+#shading {
+  fill: #FFAB8A;
+  width: 100%; /* Make the SVG width 100% to fit the container */
+  height: 100%; /* Make the SVG height 100% to fit the container */
+}
+
+
+
  /*----------------------------------------------------------------------------------*/
  /*                     6 - FOOTER                                  */
  /*----------------------------------------------------------------------------------*/
@@ -66,13 +104,40 @@ time, mark, audio, video {
   justify-content: space-between;
   padding: 0 5% 2.5%;
   align-items: flex-end;
-  background-color: red;
 }
 
-.credits {
-  background-color: rgba(0,0,0, 0.5); /* get the RGBA of the intended color*/
-  width: 300px; /*get the width of the intended*/
-  border-radius: 7px;
-  text-align: center;
+.settings img{
+  width: 100px;
+  height: 100px;
+}
 
+
+.credits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(255, 246, 220, 0.5); /* get the RGBA of the intended color*/
+  border-radius: 13px;
+
+  color: #979261;
+  font-family: "Chewy", cursive;
+  font-size: 20px;
+  letter-spacing: 3px;
+
+  position: fixed;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+}
+
+.credits p{
+    text-align: center;
+    padding: 5px 20px;
+    
+}
+
+.credits a:visited,
+.credits a:hover{
+  color: #979261;
 }
