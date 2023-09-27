@@ -68,6 +68,31 @@ toggleMusicButton.addEventListener('click', () => {
   isMusicPlaying = !isMusicPlaying;
 });
 
+var startPage = document.getElementById("start-page"), 
+tutorialPage = document.getElementById("tutorial-page"),
+gamePage = document.getElementById("game-page"),
+resultsPage = document.getElementById("results-page")
+
+
+// Pages (toggling overlays)
+// methodology: one function per button
+// start -> tutorial -> game -> results
+function togglePages(targetPage) {
+  var pages = document.querySelectorAll('.page');
+  
+  pages.forEach(function(page) {
+    // iterates thru the list and checks if that page is the targetpage. 
+    if (page.id === targetPage) {
+      page.classList.add('active'); // Turn on the target overlay
+    } else {
+      page.classList.remove('active'); // Turn off other overlays
+    }
+  });
+}
+  
+
+
+
 
 // ALGORITHM
 

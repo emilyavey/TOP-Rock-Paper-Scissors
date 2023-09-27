@@ -11,36 +11,53 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Background Video -->
     <div class="background-video">
         <video id="backgroundVideo" autoplay loop muted>
           <source src="./resources/background_video.mp4" type="video/mp4">
         </video>
     </div>
 
+    <!-- BGM -->
     <audio id="backgroundAudio" loop>
         <source src="./resources/Smile_Blooms.mp3" type="audio/mpeg">
     </audio>
       
+    <!-- Tablet -->
+    <div class="tablet">
+        <div class="screen">
 
-    <div class="game">    
-        <div class="RPSButtons">
-            <button id="rock_button">Rock</button>
-            <button id="paper_button">Paper</button>
-            <button id="scissors_button">Scissors</button>
+            <div class="active page" id="start-page">
+                <p>Rock Paper Scissors</p>
+                <button onclick="togglePages('tutorial-page')">play</button>
+            </div>
+
+            <div class="page" id="tutorial-page">
+                <p>tutorial page</p>
+            </div>
+
+            <div class="page" id="game-page">    
+                <div class="RPSButtons">
+                    <button id="rock_button">Rock</button>
+                    <button id="paper_button">Paper</button>
+                    <button id="scissors_button">Scissors</button>
+                </div>
+                <div id="playerScore">0</div>
+                <div id="computerScore">0</div>
+            </div>
+
+            <div class="page" id="results-page">
+                <p>results</p>
+            </div>
+
         </div>
 
-        <div id="playerScore">0</div>
-        <div id="computerScore">0</div>
-    </div>
-
-
-    <div class="tablet">
         <svg xmlns="http://www.w3.org/2000/svg" width="1292" height="811" viewBox="0 0 1292 811" fill="FFC6AC" id="shading">
           <path d="M238.5 685.5L1292 810.5H0V0L238.5 685.5Z"/>
         </svg>
     </div>
       
-
+    <!-- Toggles -->
     <div class="settings">
         <img id="bgToggleImage" src="./resources/background-moving.png" alt="Background Toggle Button">
         <img id="musicToggleImage" src="./resources/music-mute.png" alt="Music Toggle Button">

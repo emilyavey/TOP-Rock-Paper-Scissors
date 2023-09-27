@@ -48,6 +48,15 @@ time, mark, audio, video {
 
  }
 
+ @font-face {
+  font-family: 'Katto';
+  src: url('./resources/Fonts/kattopersonaluseoutline-0wz3r-webfont.woff2') format('woff2'),
+       url('./resources/Fonts/kattopersonaluseoutline-0wz3r-webfont.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -68,9 +77,6 @@ body {
   min-height: 100%;
 }
 
-.game {
-  position: absolute;
-}
 
 .tablet {
   width: 70%;
@@ -84,12 +90,34 @@ body {
   align-items: flex-end
 }
 
+.screen {
+  position: absolute;
+  background-color: #FFFDF7;
+  border-radius: 30px;
+  width: 90%;
+  height: 95%;
+  top: 50%; /* Move the top edge of the screen to the middle of the tablet */
+  left: 53%; /* Move the left edge of the screen to the middle of the tablet */
+  transform: translate(-50%, -50%); /* Center the screen horizontally and vertically */
+}
+
 #shading {
   fill: #FFAB8A;
   width: 100%; /* Make the SVG width 100% to fit the container */
   height: 100%; /* Make the SVG height 100% to fit the container */
 }
 
+.page {
+  display: none; /*start off with this for now*/
+}
+
+.active {
+  display: block; 
+}
+
+#start-page {
+  font-family: "Katto", sans-serif;
+}
 
 
  /*----------------------------------------------------------------------------------*/
