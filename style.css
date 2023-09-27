@@ -87,7 +87,10 @@ body {
   position: relative; /* Create a positioning context for the SVG */
   overflow: hidden; /* Hide any part of the SVG that goes outside the container */
   display: flex; /* Use flexbox for vertical alignment */
-  align-items: flex-end
+  align-items: flex-end;
+
+  font-size: 30px;
+  font-size: 3vw;
 }
 
 .screen {
@@ -107,6 +110,7 @@ body {
   height: 100%; /* Make the SVG height 100% to fit the container */
 }
 
+/* Pages (Overlays) */
 .page {
   display: none; /*start off with this for now*/
 }
@@ -118,10 +122,37 @@ body {
 #start-page {
   font-family: "Katto", sans-serif;
   color: var(--cadetgray);
-  font-size: 2em;
+  font-size: 2.3em;
+  text-align: center;
+  margin: 7% 25% 15% 25%;
 }
 
+#start-page button {
+  background-color: var(--sage);
+  box-sizing: border-box;
+  border: .1em solid transparent;
+  border-radius: .8em;
+  transition: background-color 0.1s ease-out, color 0.1s ease-out;
 
+
+  padding-left: 10%; 
+  padding-right: 7%;/* yes 8% is weird but otherwise its off center >:( i think it's centering off of TABLET and not screen*/
+  font-family: "Chewy", sans-serif;
+  font-size: .5em;
+  color: var(--cornsilk);
+  letter-spacing: .2em;
+  text-align: center;
+}
+
+#start-page button:hover{
+  background-color: #979261;
+}
+
+#start-page button:active{
+  background-color: var(--cornsilk);
+  color: var(--sage);
+  border-color: var(--sage);
+}
  /*----------------------------------------------------------------------------------*/
  /*                     6 - FOOTER                                  */
  /*----------------------------------------------------------------------------------*/
