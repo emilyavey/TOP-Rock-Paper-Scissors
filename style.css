@@ -82,8 +82,8 @@ body {
   width: 70%;
   margin: 10px;
   background-color: var(--apricot); /* Set the background color of the tablet container */
-  border: 5px solid #DF8B69;
-  border-radius: 30px; /* Adjust the border radius to match the tablet's shape */
+  border: .2em solid #DF8B69;
+  border-radius: 1.5em; /* Adjust the border radius to match the tablet's shape */
   position: relative; /* Create a positioning context for the SVG */
   overflow: hidden; /* Hide any part of the SVG that goes outside the container */
   display: flex; /* Use flexbox for vertical alignment */
@@ -93,7 +93,7 @@ body {
 .screen {
   position: absolute;
   background-color: #FFFDF7;
-  border-radius: 30px;
+  border-radius: 1em;
   width: 90%;
   height: 95%;
   top: 50%; /* Move the top edge of the screen to the middle of the tablet */
@@ -117,6 +117,8 @@ body {
 
 #start-page {
   font-family: "Katto", sans-serif;
+  color: var(--cadetgray);
+  font-size: 2em;
 }
 
 
@@ -147,12 +149,12 @@ body {
   align-items: center;
 
   background-color: rgba(255, 246, 220, 0.5); /* get the RGBA of the intended color*/
-  border-radius: 13px;
+  border-radius: .8em;
 
   color: #979261;
   font-family: "Chewy", cursive;
-  font-size: 18px;
-  letter-spacing: 3px;
+  font-size: 1em;
+  letter-spacing: .2em;
 
   position: fixed;
   left: 50%;
@@ -162,7 +164,7 @@ body {
 
 .credits p{
     text-align: center;
-    padding: 5px 20px;
+    padding: .3em 1.4em;
     
 }
 
