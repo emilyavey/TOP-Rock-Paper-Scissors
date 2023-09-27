@@ -80,7 +80,7 @@ body {
 
 .tablet {
   width: 70%;
-  margin: .4em;
+  margin: 1.2%;
   background-color: var(--apricot); /* Set the background color of the tablet container */
   border: .2em solid #DF8B69;
   border-radius: 1.5em; /* Adjust the border radius to match the tablet's shape */
@@ -169,8 +169,8 @@ body {
 }
 
 .settings img{
-  width: 5em;
-  height: 5em;
+  width: 9%;
+  height: 9%;
 }
 
 
