@@ -24,19 +24,48 @@
     </audio>
       
     <!-- Tablet -->
+    <!-- couldnt get this to show outside of tablet boundaries, so had to move it out
+    use js to get this to toggle on with tutorial 1 -->
+    <div class="exterior-tutorial">
+        <div class="instruction-box" id="instruction1">this is your side!</div>
+        <!-- thinking of placing these outside like instructions box since they dont move for the most part. If i do, i can just change class into ID instead and keep the names UPDATE i moved them-->
+        <button id="skip-button" onclick="togglePages('game-page')">skip</button>
+        <button id="next-button" onclick="togglePages('tutorial2')">next</button>
+    </div>
+        
+
     <div class="tablet">
         <div class="screen">
 
-            <div class="active page" id="start-page">
+
+            <!-- !!!! TODO: AT THE END, ADD ACTIVE TO THIS CLASS -->
+            <div class="page" id="start-page">
                 <p>Rock Paper Scissors</p>
-                <button onclick="togglePages('tutorial-page')">play</button>
+                <button onclick="togglePages('game-page')">play</button>
             </div>
 
-            <div class="page" id="tutorial-page">
-                <p>tutorial page</p>
-            </div>
 
-            <div class="page" id="game-page">    
+            <!-- might just say no tutorial page, but a page within a page?  -->
+            <div class="active page" id="game-page">   
+                <div class="active tutorial" id="tutorial1">
+                    <!-- position absolute the text boxes
+                    maybe show both game and tutorial, tutorial bg on lower opacity,
+                    disabled game buttons
+                    -->
+
+                    <div class="selector-box"></div>
+
+
+                </div>
+                
+                <div class="tutorial" id="tutorial2">
+                    <p>tutorial 2</p>
+                </div>
+
+                <div class="tutorial" id="tutorial2">
+
+                </div>
+
                 <div class="RPSButtons">
                     <button id="rock_button">Rock</button>
                     <button id="paper_button">Paper</button>

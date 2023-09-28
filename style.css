@@ -110,15 +110,18 @@ body {
   height: 100%; /* Make the SVG height 100% to fit the container */
 }
 
-/* Pages (Overlays) */
+/* Pages/Tutorial (Overlays) */
 .page {
   display: none; /*start off with this for now*/
 }
-
+.tutorial {
+  display: none;
+}
 .active {
   display: block; 
 }
 
+/* Start (Home) Page */
 #start-page {
   font-family: "Katto", sans-serif;
   color: var(--cadetgray);
@@ -153,6 +156,52 @@ body {
   color: var(--sage);
   border-color: var(--sage);
 }
+
+/* Game Page */
+#game-page {
+  font-family: "Chewy", sans-serif;
+}
+
+.instruction-box {
+  background-color: var(--cornsilk);
+  font-family: "Chewy", sans-serif;
+  color: #545766;
+  border: .1em solid var(--apricot);
+  border-radius: .3em;
+  letter-spacing: .1em;
+  text-align: center;
+  width: 25%;
+  padding: 1% 3%;
+
+  position: absolute;
+  top: 0; /* Adjust the top position as needed */
+  left: 100%; /* Place it outside the right boundary of .tablet */
+  background-color: rgba(255, 255, 255, 0.8); /* Add a background with opacity */
+  padding: 10px; /* Add padding for better visibility */
+  transform: translateX(-100%); /* Move it back by its own width */
+  z-index: 1;
+}
+
+#tutorial1 {
+
+}
+
+#skip-button, #next-button {
+  background-color: var(--cornsilk);
+  color: var(--apricot);
+  font-family: "Chewy", sans-serif;
+  font-size: 3vw;
+  border: .2em solid var(--apricot);
+  border-radius: .8em; 
+  padding: 0% 4%;
+
+  position: relative;
+  z-index: -1;
+  transform: translateX(100%);
+}
+
+
+
  /*----------------------------------------------------------------------------------*/
  /*                     6 - FOOTER                                  */
  /*----------------------------------------------------------------------------------*/
@@ -184,7 +233,7 @@ body {
 
   color: #979261;
   font-family: "Chewy", cursive;
-  font-size: 100%;
+  font-size: 200%; /* VW is stagnant, em/percentage can be zoomed*/
   letter-spacing: .2em;
 
   position: fixed;
