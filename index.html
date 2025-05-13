@@ -24,21 +24,24 @@
     </audio>
       
     <!-- Tablet -->
+     
+
+    <!-- may 13 2025: commenting out tutorial things because girl u dont even have a game to have a tutorial for -->
     <!-- couldnt get this to show outside of tablet boundaries, so had to move it out
     use js to get this to toggle on with tutorial 1 -->
-    <div class="exterior-tutorial">
-        <div class="instruction-box" id="instruction1">this is your side!</div>
+    <!-- <div class="exterior-tutorial">
+        <div class="instruction-box" id="instruction1">this is your side!</div> -->
         <!-- thinking of placing these outside like instructions box since they dont move for the most part. If i do, i can just change class into ID instead and keep the names UPDATE i moved them-->
-        <button id="skip-button" onclick="togglePages('game-page')">skip</button>
+        <!-- <button id="skip-button" onclick="togglePages('game-page')">skip</button>
         <button id="next-button" onclick="togglePages('tutorial2')">next</button>
-    </div>
-        
+    </div> -->
 
     <div class="tablet">
         <div class="screen">
 
 
             <!-- !!!! TODO: AT THE END, ADD ACTIVE TO THIS CLASS -->
+             <!-- may 13 2025: this does nothing for now, it's made for the tutorial but we can do this later ~ -->
             <div class="page" id="start-page">
                 <p>Rock Paper Scissors</p>
                 <button onclick="togglePages('game-page')">play</button>
@@ -47,13 +50,14 @@
 
             <!-- might just say no tutorial page, but a page within a page?  -->
             <div class="active page" id="game-page">   
-                <div class="active tutorial" id="tutorial1">
+                <!-- may 13 2025: commenting out tutorial related stuff -->
+                <!-- <div class="active tutorial" id="tutorial1"> -->
                     <!-- position absolute the text boxes
                     maybe show both game and tutorial, tutorial bg on lower opacity,
                     disabled game buttons
                     -->
 
-                    <div class="selector-box"></div>
+                    <!-- <div class="selector-box"></div>
 
 
                 </div>
@@ -64,15 +68,19 @@
 
                 <div class="tutorial" id="tutorial2">
 
-                </div>
+                </div> -->
 
                 <div class="RPSButtons">
                     <button id="rock_button">Rock</button>
                     <button id="paper_button">Paper</button>
                     <button id="scissors_button">Scissors</button>
                 </div>
-                <div id="playerScore">0</div>
-                <div id="computerScore">0</div>
+
+                <div class="scoreBoard">
+                    <div id="playerScore">0</div>
+                    <div id="computerScore">0</div>
+                </div>
+                
             </div>
 
             <div class="page" id="results-page">
@@ -93,7 +101,7 @@
     </div>
 
     <div class="credits">
-        <p>copyright © 2023 <a href="https://github.com/toratan123">toratan123</a> | <a href="https://github.com/toratan123/TOP-Rock-Paper-Scissors">source</a></p>
+        <p>copyright © 2023 <a href="https://github.com/emilyavey">emilyavey</a> | <a href="https://github.com/toratan123/TOP-Rock-Paper-Scissors">source</a></p>
     </div>
 
 
