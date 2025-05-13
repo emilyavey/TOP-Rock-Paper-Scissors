@@ -200,6 +200,18 @@ body {
   transform: translateX(100%);
 }
 
+/* Inside Screen Contents (game board) */
+
+.RPSButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: red; /* temporary */
+
+
+}
+
 
 
  /*----------------------------------------------------------------------------------*/
