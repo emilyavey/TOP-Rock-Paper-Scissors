@@ -1,14 +1,31 @@
 // SET UP
 
 // Define the choices and their numerical values in a dict
+// choices is a dict that has the names of choices (rock, paper, or scissors)
+// and assigns them a numerical value (0, 1, 2 respectively)
 const choices = {
     rock: 0,
     paper: 1,
     scissors: 2
 };
 
+// a matrix (fancy word for grid :D) for choices and their numerical value (see choices the dict above)
+// explanation on what the heck -1, 0, 1 means:
+//    0: a tie
+//    1: a player win, a computer loss
+//    -1: a player loss, a computer win
+// why -1, 0, 1?
+//    calculate results with the matrix!
+//    in choices, the values to each key are used as INDEXES in the const "outcomes"
+//    for example, let's do rock.
+//    rock in choices is 0.
+//    if the computer chooses paper, the value for paper in choices is 1.
+//    in the outcomes matrix, 0, 1 is rock, paper is -1.
+//    -1 is a player loss!
+
 const outcomes = [
-    /* rock    paper   scissors */
+    /*         | your (player) choice
+    /*computer |   r   p   s */
     /*-------------------------*/
     /* rock    */ [0, -1, 1],
     /* paper   */ [1, 0, -1],
@@ -20,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const paperButton = document.getElementById("paper_button");
     const scissorsButton = document.getElementById("scissors_button");
   
+    // runs playRounds() whenever a rock paper scissors button is clicked, triggering the result calculation for the round
     rockButton.addEventListener("click", function() {
       playRounds("rock", getComputerChoice())
     });
@@ -102,20 +120,17 @@ function toggleTutorial(targetTutorial) {
 
 // ALGORITHM
 
+// a really long-winded way for the computer to randomly choose "rock", "paper", "scissors" (yes, in string)
 function getComputerChoice() {
-    // Convert object keys to an array
+    // Convert object keys to an array (looks like choice dict)
     const keysArray = Object.keys(choices);
 
-    // Generate a random index
+    // Generate a random index (0, 1, 2)
     const randomIndex = Math.floor(Math.random() * 3);
 
-    // Use the random index to get a random property
+    // Use the random index to get a random property (a string "rock", "paper", or "scissors")
     const randomProperty = keysArray[randomIndex];
 
-    // Get the value associated with the random property
-    // = computerChoice is either rock, paper, or scissors
-    //const computerChoice = randomProperty;
-    //console.log(computerChoice)
     return randomProperty;
 };
     
@@ -123,12 +138,18 @@ var playerCurrentScore = 0, computerCurrentScore = 0;
 const playerScoreDisplay = document.getElementById("playerScore");
 const computerScoreDisplay = document.getElementById("computerScore");
 
+// calculates the result of a round, and also the final result
 function playRounds(playerChoice, computerChoice) {
     // playerValue and computerValue should be numbers
     const playerValue = choices[playerChoice]
     const computerValue = choices[computerChoice];
-    console.log(playerValue, playerChoice)
-    console.log(computerValue, choices[computerChoice]  )
+    console.log("player value (number 0, 1, 2): " + playerValue)
+    console.log("player choice ('rock', 'paper', or 'scissors): ", playerChoice)
+    console.log("---")
+    console.log("computer value (number 0, 1, 2): " + computerValue)
+    console.log("computer choice ('rock', 'paper', or 'scissors): " + computerChoice)
+    console.log("-----")
+
     const outcome = outcomes[playerValue][computerValue];
     console.log(outcome)
 
