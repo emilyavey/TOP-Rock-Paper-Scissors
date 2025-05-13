@@ -133,8 +133,11 @@ function getComputerChoice() {
 
     return randomProperty;
 };
-    
+  
+// initializing player and computer score to 0
 var playerCurrentScore = 0, computerCurrentScore = 0;
+
+// updates score display by html ID
 const playerScoreDisplay = document.getElementById("playerScore");
 const computerScoreDisplay = document.getElementById("computerScore");
 
